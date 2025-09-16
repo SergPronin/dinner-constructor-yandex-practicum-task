@@ -38,18 +38,18 @@ public class DinnerConstructor {
         return dinnersByType.containsKey(type); //если хранилище уже содержит такое блюдо - вернём true
     }
 
-    //метод для генерирования одной комбинации блюд
+    // метод для генерирования одной комбинации блюд
     private ArrayList<String> generateCombo(ArrayList<String> dishTypes) {
         ArrayList<String> selectedDishes = new ArrayList<>();
         for (String dishType: dishTypes) {
-            String availableDishes = dinnersByType.get(dishType); // достаём из хранилища варианты блюд по типу
+            ArrayList<String> availableDishes = dinnersByType.get(dishType); // достаём из хранилища варианты блюд по типу
             String selectedDish = getRandomDish(availableDishes); //получим произвольное блюдо
             selectedDishes.add(selectedDish); //добавим блюдо в подборку комбинацию
         }
         return selectedDishes;
     }
 
-    private String getRandomDish(??? availableDishes) {
+    private String getRandomDish(ArrayList availableDishes) {
         int numberOfDishesForType = availableDishes.size(); //получаем общее количество доступных блюд этого типа
         int dishIndex = random.nextInt(numberOfDishesForType); //генерируем случайное число от 0 до (кол-во блюд - 1), чтобы выбрать случайное блюдо
         String selectedDish = availableDishes.???(dishIndex); //выберем произвольное блюдо по индексу
