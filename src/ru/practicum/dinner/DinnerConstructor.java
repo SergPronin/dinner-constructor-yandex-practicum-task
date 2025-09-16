@@ -11,7 +11,7 @@ public class DinnerConstructor {
 
     // в этом методе мы добавляем компонент в подборку
     public void addNewDish(String dishType, String dishName) {
-        ArrayList<String> dishesForType; // переменая для списка блюд
+        ArrayList<String> dishesForType; // переменная для списка блюд
         if (dinnersByType.containsKey(dishType)) { //здесь мы должны проверить, содержит ли наше хранилище такое блюдо
             dishesForType = dinnersByType.get(dishType); //если мы уже работали с этим типом - используем существующий список
         } else {

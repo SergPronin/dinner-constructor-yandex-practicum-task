@@ -43,6 +43,7 @@ public class Main {
         String dishName = scanner.nextLine();
 
         // добавьте новое блюдо, с помощью метода DinnerConstructor addNewDish
+        dc.addNewDish(dishType, dishName);
     }
 
     private static void generateDishCombo() {
