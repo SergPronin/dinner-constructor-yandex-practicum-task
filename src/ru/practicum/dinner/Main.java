@@ -57,14 +57,14 @@ public class Main {
         String nextItem = scanner.nextLine();
 
         //реализуйте ввод типов блюд
-        ??? selectedTypes = new ArrayList<>();
-        while (!nextItem.isEmpty()) { //варианты вводит пользователь
-            if (dc.???(nextItem)) { //но вы должны проверить, существуют ли эти блюда в хранилище с помощью метода DinnerConstructor checkType
-                selectedTypes.???(nextItem); //выбранное блюдо добавьте в список вариантов
+        ArrayList<String> selectedTypes = new ArrayList<>();
+        while (!nextItem.isEmpty()) { // варианты вводит пользователь
+            if (dc.checkType(nextItem)) { // но вы должны проверить, существуют ли эти блюда в хранилище с помощью метода DinnerConstructor checkType
+                selectedTypes.add(nextItem); //выбранное блюдо добавьте в список вариантов
             } else {
                 System.out.println("Такой тип блюд мы еще не умеем готовить. Попробуйте что-нибудь другое!");
             }
-            nextItem = scanner.???(); //перейдите к следующему пункту ввода пользователя
+            nextItem = scanner.nextLine(); // перейдите к следующему пункту ввода пользователя
         }
 
         // сгенерируйте комбинации блюд и выведите на экран
