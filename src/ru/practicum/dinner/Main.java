@@ -50,8 +50,24 @@ public class Main {
         System.out.println("Начинаем конструировать обед...");
 
         System.out.println("Введите количество наборов, которые нужно сгенерировать:");
-        int numberOfCombos = scanner.nextInt();
-        scanner.nextLine();
+        int numberOfCombos = -1;
+        while (true) {
+            if (scanner.hasNextInt()) {
+                numberOfCombos = scanner.nextInt();
+                scanner.nextLine();
+
+                if (numberOfCombos >= 1) {
+                    break;
+                } else {
+                    System.out.println("Ошибка: число должно быть не меньше 1. Попробуйте ещё раз: ");
+                }
+            } else {
+                System.out.println("Ошибка: нужно ввести число (>=1). Попробуйте еще раз: ");
+                scanner.nextLine();
+            }
+
+
+        }
 
         System.out.println("Вводите типы блюда, разделяя символом переноса строки (enter). Для завершения ввода введите пустую строку");
         String nextItem = scanner.nextLine();
