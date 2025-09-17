@@ -86,7 +86,7 @@ public class Main {
         // сгенерируйте комбинации блюд и выведите на экран
         ArrayList<ArrayList<String>> generatedCombos = dc.generateCombos(numberOfCombos, selectedTypes); // сгенерируйте варианты комбинаций блюд с помощью метода DinnerConstructor generateCombos
         for (int i = 0; i < numberOfCombos; i++) {
-            System.out.println("Комбинация " + i);
+            System.out.println("Комбинация " + (i + 1));
             System.out.println(generatedCombos.get(i)); // выведите каждый элемент получившейся комбинации
         }
     }
