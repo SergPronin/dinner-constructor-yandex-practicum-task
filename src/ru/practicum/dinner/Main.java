@@ -25,6 +25,8 @@ public class Main {
                     break;
                 case "3":
                     return;
+                default:
+                    System.out.println("Неизвестная команда. Выберите 1, 2 или 3.");
             }
         }
     }
